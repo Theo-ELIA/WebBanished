@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html lang="fr" ng-app>
+<head>
+	<meta charset="utf-8">
+
+	<title>Banished et les tâches s'évanouissent</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Banished The Game The Game">
+	<meta name="author" content="Chokomystere">
+
+	<link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+	<script src="bower_components\angular\angular.min.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="./modules/town.js"></script>
+	<script src="./modules/Villager.js"></script>
+	<script src="app.js"></script>
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body class="container-fluid">
+<h1>Banished : HTML Edition</h1>
+<h2>Debut Printemps</h2>
+<div class="leftMenu col-md-3">
+	<div class="RessourceMenu">
+	<h3>Ressources</h3>
+		<table class="table table-hover">
+			<tr>
+				<th>Nourriture</th>
+				<td>500</td>
+			</tr>
+			<tr>
+				<th>Bois</th>
+				<td>300</td>
+			</tr>
+			<tr>
+				<th>Pierre</th>
+				<td>400</td>
+			</tr>
+			<tr>
+				<th>Fer</th>
+				<td>0</td>
+			</tr>
+			<tr>
+				<th>Herbes</th>
+				<td>0</td>
+			</tr>
+			<tr>
+				<th>Cuir</th>
+				<td>10</td>
+			</tr>
+			<tr>
+				<th>Laine</th>
+				<td>0</td>
+			</tr>
+			<tr>
+				<th>Charbon</th>
+				<td>3</td>
+			</tr>
+			<tr>
+				<th>Bois de chauffage</th>
+				<td>130</td>
+			</tr>
+			<tr>
+				<th>Outils</th>
+				<td>8</td>
+			</tr>
+			<tr>
+				<th>Vêtements</th>
+				<td>10</td>
+			</tr>
+			<tr>
+				<th>Liqueur</th>
+				<td>0</td>
+			</tr>
+			<tr>
+				<th>Reserves de nouritture</th>
+				<td>500/600</td>
+			</tr>
+			<tr>
+				<th>Reserve de matière première</th>
+				<td>1000/1500</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="middleMenu col-md-4">
+	<div class="logWindow">
+		<h3>Log</h3>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+	</div>
+	<div class="buildWindows">
+		<ul id="buildingTabs" class=" nav nav-tabs">
+		  <li role="presentation"><a href="#menuBuilding"  data-toggle="tab">Menu construction</a></li>
+		  <li role="presentation"><a href="#WIPBuildingWindow"  data-toggle="tab">En construction</a></li>
+		  <li role="presentation"><a href="#builtWindow"  data-toggle="tab">construit</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="menuBuilding" class="active tab-pane menuBuilding">
+				<ul>
+					<li><button class="btn btn-default" type="submit">Batiment</button></li>
+					<li><button class="btn btn-default" type="submit">Batiment</button></li>
+					<li><button class="btn btn-default" type="submit">Batiment</button></li>
+					<li><button class="btn btn-default" type="submit">Batiment</button></li>
+				</ul>
+			</div>
+			<div id="WIPBuildingWindow" class="tab-pane WIPBuildingWindow">
+				<ul>
+					<li>Maison <div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="30" aria-valuemax="100" style="width: 30%;">30%</div></div></li>
+				</ul>
+			</div> 
+			<div id="builtWindow" class="tab-pane builtWindow">
+			<table>
+				<tr>
+					<th>Maisons</th>
+					<td>8</td>
+				</tr>
+				<tr>
+					<th>Fermes</th>
+					<td>12</td>
+				</tr>
+				<tr>
+					<th>Forge</th>
+					<td>3</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+</div>
+
+<div class="rightMenu col-md-4">
+	<div class="jobWindow">
+		<h3>Jobs</h3>
+		<ul>
+			<li>Travailleurs <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Constructeurs <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Chasseurs <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Fermiers <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Pécheur <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Ceuilleur <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Tailleurs <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Coupeur de bois <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Forgerons <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+			<li>Marchands <input type="number" name="nbJob" value="0" min="0" max="10"></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

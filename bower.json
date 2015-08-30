@@ -1,0 +1,25 @@
+{
+  "name": "WebBanishe",
+  "version": "0.0.0",
+  "authors": [
+    "Théo ELIA <theo.elia@live.fr>"
+  ],
+  "description": "A Web version of the game Banished",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}
